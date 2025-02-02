@@ -41,7 +41,7 @@ async function main() {
 
 async function getchapters(folder) {
     if(folder == "maths"){
-        return 3;
+        return 1;
     }
 }
 
