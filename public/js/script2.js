@@ -14,7 +14,11 @@ async function getmaterial(folder) {
 
     Array.from(document.querySelectorAll(".material")).forEach(e=>{
         e.addEventListener("click", async()=>{
+            document.querySelector(".loadingbar").style.display = "block"
             window.location.href = url + "/" + e.querySelector(".ch").innerHTML
+            setTimeout(() => {
+                document.querySelector(".loadingbar").style.display = "none"
+            }, 3000);
         })
     })
 }

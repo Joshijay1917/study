@@ -112,18 +112,25 @@ body {
 
 .card {
     position: relative;
-    width: 194px;
+    width: 90%;
+    border-radius: 25px;
     background-color: #252525;
-    padding: 10px;
     cursor: pointer;
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    padding: 5px;
 }
 
-.card>* {
-    padding-top: 10px;
+.material img{
+    width: 10%;
+    border-radius: 25px;
 }
 
 .card img {
-    width: 100%;
+    padding-left: 2px;
+    border-radius: 25px;
+    width: 10%;
     object-fit: contain;
 }
 
@@ -404,18 +411,64 @@ body {
     top: 0;
     left: 0;
     opacity: 0.8;
-    background-color: #292929;
+    background-color: black;
     z-index: 1;
 }
 
 .material {
     position: relative;
-    width: 194px;
+    width: 90%;
     background-color: #252525;
     padding: 10px;
     cursor: pointer;
     display: flex;
     gap: 14px;
+    display: flex;
+    align-items: center;
+    border-radius: 25px;
+}
+
+.pdfimg{
+    width: 20%;
+}
+
+.load{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 2;
+}
+
+.loading{
+    background-color: white;
+    width: 204px;
+    height: 192px;
+    border-radius: 50%;
+}
+
+.loading div{
+    background-color: black;
+    width: 202px;
+    height: 192px;
+    border-radius: 50%;
+    animation: rotate 0.25s infinite ease-in-out;
+}
+
+.loadingbar{
+    display: none;
+    position: absolute;
+}
+
+@keyframes rotate {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
 }
 
 @media screen and (max-width:1000px) {
