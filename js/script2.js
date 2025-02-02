@@ -6,18 +6,17 @@ async function getmaterial(folder) {
     document.querySelector(".cardcontainer").innerHTML = ""
     
     for (let i = 1; i < chapters+1; i++) {
-        let geturl = url + `/chapter-${i}` + ".pdf"
         document.querySelector(".cardcontainer").innerHTML = document.querySelector(".cardcontainer").innerHTML + `<div class="material">
                     <img src="./img/pdf.png" alt="">
-                        <h3>Chapter-${i}.pdf</h3>
+                        <h3 class="ch">Chapter-${i}.pdf</h3>
                     </div>`
-        
-        Array.from(document.querySelectorAll(".material")).forEach(e=>{
-            e.addEventListener("click", async()=>{
-                window.location.href = geturl
-            })
-        })
     }
+
+    Array.from(document.querySelectorAll(".material")).forEach(e=>{
+        e.addEventListener("click", async()=>{
+            window.location.href = url + e.querySelector(".ch").innerHTML
+        })
+    })
 }
 
 async function main() {
