@@ -14,7 +14,7 @@ async function getmaterial(folder) {
 
     Array.from(document.querySelectorAll(".material")).forEach(e=>{
         e.addEventListener("click", async()=>{
-            window.location.href = url + e.querySelector(".ch").innerHTML
+            window.location.href = url + "/" + e.querySelector(".ch").innerHTML
         })
     })
 }
