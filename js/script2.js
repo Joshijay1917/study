@@ -12,7 +12,7 @@ async function getmaterial(folder) {
                         <h3>Chapter-${i}.pdf</h3>
                     </div>`
         
-        Array.from(document.querySelector(".material")).forEach(e=>{
+        Array.from(document.querySelectorAll(".material")).forEach(e=>{
             e.addEventListener("click", async()=>{
                 window.location.href = geturl
             })
