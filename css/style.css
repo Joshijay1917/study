@@ -205,28 +205,28 @@ body {
     height: 30px;
 }
 
-.songlist {
+.subjectlist {
     height: 60vh;
     overflow: auto;
 }
 
-.songlist ul li {
+.subjectlist ul li {
+    align-items: center;
     list-style: decimal;
     display: flex;
-    gap: 10px;
+    gap: 30px;
     cursor: pointer;
     padding: 12px 0;
     border: 1px solid white;
     padding: 13px;
     border-radius: 5px;
     margin: 12px 0;
-    justify-content: space-between;
+    justify-content: flex-start;
 }
 
 .playnow {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    position: relative;
+    right: -16%;
 }
 
 .playnow span {
@@ -486,6 +486,12 @@ body {
     }
 
     .material>img {
+        padding-left: 1px;
+        border-radius: 25px;
+    }
+
+    .pdfimg{
+        width: 16%;
         padding-left: 1px;
         border-radius: 25px;
     }
